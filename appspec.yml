@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+files: 
+  - source: /
+    destination: /home/ubuntu/Manual-Deployment-Backend
+    overwrite: true
+files_exsist_behavior: OVERWRITE
+hooks:
+  ApplicationInstall:
+    - location: script/application_install.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: script/application_start.sh
+      timeout: 300
+      runas: root
