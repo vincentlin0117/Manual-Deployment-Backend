@@ -2,15 +2,15 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/FoodCraft-Backend
+    destination: /home/ubuntu/Manual-Deployment-Backend
     overwrite: true
 files_exists_behavior: OVERWRITE
 hooks:
   AfterInstall:
-    - location: scripts/after_install.sh
+    - location: script/after_install.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: scripts/application_start.sh
+    - location: script/application_start.sh
       timeout: 300
       runas: root
