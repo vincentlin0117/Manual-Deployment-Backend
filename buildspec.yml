@@ -5,6 +5,7 @@ phases:
       nodejs: 18
     commands:
       - npm install
+      - ls
 artifacts:
   files: 
     - "**/*"
